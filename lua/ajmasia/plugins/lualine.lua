@@ -1,6 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	event = "VimEnter",
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
@@ -13,7 +14,7 @@ return {
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					statusline = { "alpha", "dashboard", "TelescopePrompt", "mason" },
+					statusline = { "alpha", "dashboard", "TelescopePrompt", "mason", "" },
 				},
 			},
 			extensions = { "neo-tree", "lazy" },

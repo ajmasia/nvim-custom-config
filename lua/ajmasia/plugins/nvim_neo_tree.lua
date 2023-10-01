@@ -11,7 +11,7 @@ return {
 			{
 				"<leader>e",
 				function()
-					require("neo-tree.command").execute({ toggle = true, reveal = true })
+					require("neo-tree.command").execute({ toggle = true, reveal_force_cwd = true })
 				end,
 				desc = "Explorer NeoTree (root dir)",
 			},
