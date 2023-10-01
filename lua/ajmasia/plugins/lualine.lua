@@ -14,7 +14,7 @@ return {
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					statusline = { "alpha", "dashboard", "TelescopePrompt", "mason", "" },
+					statusline = { "alpha", "dashboard", "TelescopePrompt", "mason" },
 				},
 			},
 			extensions = { "neo-tree", "lazy" },
