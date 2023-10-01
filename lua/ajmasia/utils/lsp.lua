@@ -26,7 +26,7 @@ local servers_icons = {
 	cssls = "",
 	emmetls = "",
 	html = "",
-	marksman = "",
+	rnix = "",
 }
 
 M.get_attached_servers = function(msg)
@@ -44,7 +44,7 @@ M.get_attached_servers = function(msg)
 	end
 
 	local buf_client_names = {}
-	local copilot_active = false
+	-- local copilot_active = false
 
 	-- add client
 	for _, client in pairs(buf_clients) do
