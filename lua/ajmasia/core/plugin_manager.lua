@@ -23,7 +23,8 @@ else
   lazy.setup {
     spec = {
       -- import/override defined plugins
-      { import = "ajmasia.plugins" }
+      { import = "ajmasia.plugins" },
+      { import = "ajmasia.plugins.lsp" }
     },
     checker = {
       -- automatically check for plugin updates
