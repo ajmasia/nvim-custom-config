@@ -28,3 +28,10 @@ opt.swapfile = false -- disble swap files
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+
+-- appearance
+opt.termguicolors = true -- true color support
+
+-- undo persistence
+opt.undofile = true -- Enables persistent undo, which saves undo history to a file
+opt.undolevels = 10000 -- Sets the maximum number of changes that can be undone
