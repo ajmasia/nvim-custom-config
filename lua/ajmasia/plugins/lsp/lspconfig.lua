@@ -69,6 +69,12 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		vim.diagnostic.config({
+			virtual_text = {
+				prefix = vim.fn.has("nvim-0.10.0") == 0 and "●",
+			},
+		})
+
 		-- servers settings
 		-- configure html server
 		lspconfig["html"].setup({
