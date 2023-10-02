@@ -37,4 +37,4 @@ opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift t
 opt.undofile = true -- Enables persistent undo, which saves undo history to a file
 opt.undolevels = 10000 -- Sets the maximum number of changes that can be undone
 
--- opt.shortmess:append({ W = true, I = true, c = true })
+opt.shortmess:append({ W = true, I = true, c = true })
