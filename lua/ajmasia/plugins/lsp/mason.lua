@@ -23,6 +23,7 @@ return {
 				-- "lua_ls", this server do not works with NixOS. Plase install directly in your system
 				"emmet_ls",
 				"rnix",
+        "eslint"
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

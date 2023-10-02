@@ -107,6 +107,12 @@ return {
 			on_attach = on_attach,
 		})
 
+		-- configure rnix server
+		lspconfig["eslint"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		-- lua-languege-server
 		lspconfig["lua_ls"].setup({
 			capabilities = capabilities,

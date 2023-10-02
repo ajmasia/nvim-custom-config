@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   lazy = true,
-  -- event = { "BufReadPre", "BufNewFile" },
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
 
@@ -16,6 +16,7 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        graphql = { "prettier" },
         lua = { "stylua" },
       },
       format_on_save = {
