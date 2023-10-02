@@ -31,6 +31,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- appearance
 opt.termguicolors = true -- true color support
+opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
 
 -- undo persistence
 opt.undofile = true -- Enables persistent undo, which saves undo history to a file
