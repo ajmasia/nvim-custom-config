@@ -1,3 +1,33 @@
+local copilot = function()
+  local Util = require("ajmasia.utils")
+  local colors = {
+    [""] = Util.fg("Special"),
+    ["Normal"] = Util.fg("Special"),
+    ["Warning"] = Util.fg("DiagnosticError"),
+    ["InProgress"] = Util.fg("DiagnosticWarn"),
+  }
+  return {
+    function()
+      local icon = " "
+      local status = require("copilot.api").status.data
+      return icon .. (status.message or "")
+    end,
+
+    cond = function()
+      local ok, clients = pcall(vim.lsp.get_active_clients, { name = "copilot", bufnr = 0 })
+      return ok and #clients > 0
+    end,
+
+    color = function()
+      if not package.loaded["copilot"] then
+        return
+      end
+      local status = require("copilot.api").status.data
+      return colors[status.status] or colors[""]
+    end,
+  }
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -46,6 +76,7 @@ return {
           {
             require("ajmasia.utils.lsp").get_attached_servers,
           },
+          copilot(),
           {
             require("lazy.status").updates,
             cond = require("lazy.status").has_updates,

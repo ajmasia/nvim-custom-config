@@ -39,3 +39,4 @@ opt.undolevels = 10000 -- Sets the maximum number of changes that can be undone
 
 opt.shortmess:append({ W = true, I = true, c = true })
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
+opt.timeoutlen = 100
