@@ -1,7 +1,7 @@
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
-  enabled = false,
+  enabled = true,
   dependencies = { "nvim-tree/nvim-web-devicons", "BlakeJC94/alpha-nvim-fortune" },
   config = function()
     local alpha = require("alpha")
@@ -55,7 +55,7 @@ return {
         button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
         button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
         button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
-        -- button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
+        button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
         button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
       },
       opts = {
